@@ -1,7 +1,7 @@
 import { Lightning } from "@lightningjs/sdk";
 
-let HOLE_W = 880;
-let HOLE_H = 550;
+let HOLE_W = 960;
+let HOLE_H = 540;
 
 export default class App extends Lightning.Component {
   static _template() {
@@ -23,7 +23,7 @@ export default class App extends Lightning.Component {
           // h: 550,
           w: HOLE_W,
           h: HOLE_H,
-          x: 1120,
+          x: 960,
           y: 0,
         },
         // },
@@ -41,7 +41,7 @@ export default class App extends Lightning.Component {
       width: this.tag("Container").shader.w,
       height: this.tag("Container").shader.h,
     };
-    showAndroidToast(JSON.stringify(data));
+    // showAndroidToast(JSON.stringify(data));
     // console.log(this.tag("Container").shader.h);
     // showAndroidToast("hi how are you");
     // this.tag("HolePunch")
