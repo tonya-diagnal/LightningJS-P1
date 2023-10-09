@@ -37,7 +37,8 @@ export default class App extends Lightning.Component {
   //   canvas.style.backgroundColor = "0x00000000";
   // }
   _init() {
-    let data = { width: HOLE_W, h: HOLE_H };
+    let data = { width: HOLE_W, height: HOLE_H };
+    this.tag(Con);
     showAndroidToast(JSON.stringify(data));
     // showAndroidToast("hi how are you");
     // this.tag("HolePunch")
