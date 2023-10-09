@@ -1,11 +1,9 @@
 import { Lightning } from "@lightningjs/sdk";
 
-// let HOLE_W = 880;
-// let HOLE_H = 550;
+let HOLE_W = 880;
+let HOLE_H = 550;
 
 export default class App extends Lightning.Component {
-  _HoleWidth = 880;
-  _holeHeight = 550;
   static _template() {
     return {
       Container: {
@@ -23,8 +21,8 @@ export default class App extends Lightning.Component {
           type: Lightning.shaders.Hole,
           // w: 800,
           // h: 550,
-          w: this._HoleWidth,
-          h: this._holeHeight,
+          w: HOLE_W,
+          h: HOLE_H,
           x: 1120,
           y: 0,
         },
