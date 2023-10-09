@@ -41,7 +41,7 @@ export default class App extends Lightning.Component {
       width: this.tag("Container").shader.w,
       height: this.tag("Container").shader.h,
     };
-    // showAndroidToast(JSON.stringify(data));
+    showAndroidToast(JSON.stringify(data));
     // console.log(this.tag("Container").shader.h);
     // showAndroidToast("hi how are you");
     // this.tag("HolePunch")
