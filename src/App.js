@@ -1,4 +1,7 @@
-import { Lightning, Utils } from '@lightningjs/sdk'
+import { Lightning } from "@lightningjs/sdk";
+
+let HOLE_W = 880;
+let HOLE_H = 550;
 
 export default class App extends Lightning.Component {
   static _template() {
@@ -16,15 +19,17 @@ export default class App extends Lightning.Component {
         // HolePunch: {
         shader: {
           type: Lightning.shaders.Hole,
-          w: 800,
-          h: 550,
+          // w: 800,
+          // h: 550,
+          w: HOLE_W,
+          h: HOLE_H,
           x: 1120,
           y: 0,
         },
         // },
       },
       // },
-    }
+    };
   }
 
   // _init() {
@@ -32,6 +37,8 @@ export default class App extends Lightning.Component {
   //   canvas.style.backgroundColor = "0x00000000";
   // }
   _init() {
+    let data = { width: HOLE_W, h: HOLE_H };
+    showAndroidToast(JSON.stringify(data));
     // showAndroidToast("hi how are you");
     // this.tag("HolePunch")
   }
@@ -41,6 +48,6 @@ export default class App extends Lightning.Component {
 //   stage: { w: window.innerWidth, h: window.innerHeight, useImageWorker: false },
 // });
 // document.body.appendChild(App.stage.getCanvas());
-// function showAndroidToast(toast) {
-//   Android.showToast(toast);
-// }
+function showAndroidToast(toast) {
+  Android.showToast(toast);
+}
