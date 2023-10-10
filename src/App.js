@@ -11,7 +11,7 @@ export default class App extends Lightning.Component {
         y: 0,
         w: 1920,
         h: 1080,
-        color: 0xffff0000,
+        color: 0xff000000,
         rect: true,
         Playbutton: {
           // rect: true,
@@ -24,6 +24,21 @@ export default class App extends Lightning.Component {
           y: 270,
           x: 1440,
           mount: 0.5,
+        },
+        Outline: {
+          x: 950,
+          y: -10,
+          w: 200,
+          h: 600,
+          shader: null,
+          rect: true,
+          colorLeft: 0xff000000,
+          colorRight: 0x00000000,
+          // shader: {
+          //   type: Lightning.shaders.Outline,
+          //   stroke: [50, 70],
+          //   color: 0xff0000ff,
+          // },
         },
         shader: {
           type: Lightning.shaders.Hole,
