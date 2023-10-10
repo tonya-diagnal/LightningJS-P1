@@ -53,7 +53,7 @@ export default class App extends Lightning.Component {
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
     if (isAndroid) {
-      senData(JSON.stringify(playData));
+      sendData(JSON.stringify(playData));
     }
     // console.log("key entered");
     // this.tag("Playbutton").text.text = "Search";
@@ -64,6 +64,6 @@ function showAndroidToast(toast) {
   Android.showToast(toast);
 }
 
-function senData(data) {
+function sendData(data) {
   Android.playMedia(data);
 }
