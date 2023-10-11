@@ -59,7 +59,7 @@ export default class App extends Lightning.Component {
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
     if (isAndroid) {
-      showAndroidToast(JSON.stringify(data));
+      showAndroidToast(data);
     }
   }
 
@@ -75,8 +75,8 @@ export default class App extends Lightning.Component {
   }
 }
 
-function showAndroidToast(toast) {
-  Android.showToast(toast);
+function showAndroidToast(data) {
+  Android.showPreviewPlayer(data.width, data.height);
 }
 
 function sendData(data) {
