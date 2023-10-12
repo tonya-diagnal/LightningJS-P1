@@ -5,7 +5,10 @@
     "@lightningjs/sdk": "^5.4.1"
   },
   "lint-staged": {
-    "*.js": []
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "scripts": {
     "prepare": "husky install",
